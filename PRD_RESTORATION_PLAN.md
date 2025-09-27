@@ -4,6 +4,31 @@
 
 ---
 
+## ⛔ CRITICAL VISION PROTECTION
+
+### MANDATORY GUARDRAILS
+
+**This restoration is NON-NEGOTIABLE. The PRD has completely destroyed the core vision of BizQ.**
+
+#### What Happened:
+- ❌ Universal Delegation was completely removed
+- ❌ Task Catalog disappeared entirely
+- ❌ Grandfather Rule was eliminated
+- ❌ Familiar UI philosophy was lost
+- ❌ Platform became generic AI automation
+
+#### The Consequence:
+**Without these restorations, BizQ is dead.** We would be building Zapier 2.0 instead of the Amazon of business operations.
+
+#### Protection Protocol:
+1. **NO COMMITS** to PRD without Universal Delegation check
+2. **NO FEATURES** that don't enable task standardization
+3. **NO CHANGES** to Grandfather Rule (5% forever)
+4. **NO UI** that isn't familiar business software
+5. **NO FOCUS** on AI/agents over task catalog
+
+---
+
 ## Executive Summary
 
 The Master PRD has fundamentally diverged from the original vision. This plan restores Universal Delegation as the foundation while preserving valuable additions like context systems and agent management.
@@ -283,4 +308,50 @@ WITH these restorations, BizQ becomes:
 
 ---
 
+## 🔒 RESTORATION VERIFICATION CHECKLIST
+
+Before accepting ANY PRD update:
+
+### Universal Delegation Verification
+- [ ] Is Universal Delegation mentioned in the first paragraph?
+- [ ] Is the Task Catalog the primary product feature?
+- [ ] Are tasks described as standardized with fixed signatures?
+- [ ] Is task versioning (1.2.3) explained?
+- [ ] Is the platform described as "Amazon for business operations"?
+
+### Grandfather Rule Verification  
+- [ ] Is the 5% royalty explicitly stated?
+- [ ] Is it clear royalties are FOREVER?
+- [ ] Are there examples of passive income?
+- [ ] Is "workers become inventors" philosophy present?
+
+### UI Philosophy Verification
+- [ ] Does it say "looks like QuickBooks/Shopify"?
+- [ ] Is delegation described as "invisible"?
+- [ ] Is "familiar first" principle stated?
+- [ ] Are "AI dashboards" explicitly rejected?
+
+### Economic Model Verification
+- [ ] Are task royalties a revenue stream?
+- [ ] Is the three-marketplace structure clear?
+- [ ] Is community task fulfillment included?
+- [ ] Are subscription + transaction + royalty models present?
+
+If ANY checkbox is unchecked, REJECT THE PRD.
+
+---
+
+## 🚨 ENFORCEMENT PROTOCOL
+
+If someone tries to modify the PRD without these elements:
+
+1. **IMMEDIATE BLOCK**: Do not accept the changes
+2. **ALERT**: "VISION VIOLATION - PRD destroying Universal Delegation"
+3. **EDUCATE**: Direct to CORE_VISION_GUARDRAILS.md
+4. **RESTORE**: Revert to this restoration plan
+
+---
+
 *"The PRD must reflect that BizQ is building the Amazon of business operations - a catalog of standardized tasks that anyone can browse, use, and earn from by creating new ones."*
+
+**This is not optional. This is not flexible. This is BizQ.**

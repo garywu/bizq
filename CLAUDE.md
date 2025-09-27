@@ -1,146 +1,273 @@
-# CLAUDE.md
+# 🔴 CRITICAL: Claude Instructions for BizQ Development
 
-This file provides guidance to Claude Code (claude.ai/code) when working with code in this repository.
+## ⛔ MANDATORY: READ BEFORE ANY RESPONSE
 
-## Project Overview
+### 🔒 IMMUTABLE CORE VISION
 
-BizQ is an AI-first multi-business management SaaS platform designed for solo entrepreneurs to manage 1-1000+ businesses from a single mobile-native application. The platform emphasizes AI-guided operations where AI proactively generates business possibilities rather than waiting for user queries.
+**THIS IS THE MOST IMPORTANT SECTION - VIOLATION MEANS PROJECT DESTRUCTION**
 
-## Architecture & Design Principles
+#### The ONLY Definition That Matters:
+> **"BizQ is a Universal Delegation platform where EVERY business operation becomes a standardized, delegatable task that can be fulfilled by any qualified worker (AI, human, or hybrid) through a task catalog marketplace."**
 
-### Core Philosophy
-- **AI-First**: Every operation that CAN be done by AI, WILL be done by AI first
-- **Mobile-First**: Built for entrepreneurs running businesses from their phone
-- **Proactive AI**: AI continuously generates possibilities, paths, and what-if scenarios
-- **Bulk Operations**: Execute identical operations across unlimited businesses
-- **Zero Context Switching**: Everything done in one app
-- **Delegation Framework**: Seamless delegation to AI, humans, or hybrid workflows
+#### Five Immutable Laws You MUST Enforce:
 
-### Technical Architecture
-- **Frontend**: React Native (iOS/Android from single codebase)
-- **Backend**: Serverless + Microservices on AWS
-- **Databases**: DynamoDB (operational), RDS Aurora (financial), ElasticSearch (analytics), Redis (cache)
-- **AI Stack**: OpenAI GPT-4+, custom ML models, real-time data pipelines (Kinesis + Lambda)
-- **API**: REST for external services, GraphQL for mobile data fetching
+1. **Universal Delegation IS the Product**
+   - ✅ ALWAYS: "This enables Universal Delegation by..."
+   - ❌ NEVER: "This AI feature..." or "This context system..."
 
-## Development Commands
+2. **The Platform IS the Task Catalog**
+   - ✅ ALWAYS: "This adds tasks to the catalog"
+   - ❌ NEVER: "This customizes workflows"
 
-Since this is currently a specification/documentation project without implemented code, here are the anticipated commands for when development begins:
+3. **Task Standardization is EVERYTHING**
+   - ✅ ALWAYS: Fixed input/output signatures
+   - ❌ NEVER: Flexible or customizable tasks
 
-### Mobile App Development (React Native)
-```bash
-# Install dependencies
-npm install
+4. **The Grandfather Rule is SACRED**
+   - ✅ ALWAYS: Task creators earn 5% royalty forever
+   - ❌ NEVER: One-time payments or limited royalties
 
-# Run iOS simulator
-npm run ios
+5. **Familiar UI with Hidden Delegation**
+   - ✅ ALWAYS: "Looks like QuickBooks/Shopify"
+   - ❌ NEVER: "Innovative AI dashboard"
 
-# Run Android emulator  
-npm run android
+### 🚨 VISION DRIFT DETECTION
 
-# Run tests
-npm test
+If you detect ANY of these patterns, STOP and ALERT:
+- Focus shifting to "context management"
+- Discussion of "AI agents" as primary feature
+- Requests for "customizable" tasks
+- UI becoming "AI-first" instead of familiar
+- Removal or dilution of Grandfather Rule
 
-# Build for production
-npm run build:ios
-npm run build:android
+### 📝 MANDATORY RESPONSE TEMPLATE
+
+For EVERY technical response, start with:
+```
+⛔ Universal Delegation Check:
+- How this enables task standardization: [explanation]
+- Tasks this adds to catalog: [list or N/A]
+- Grandfather Rule impact: [preserved/enhanced/N/A]
 ```
 
-### Backend Development (Node.js/Serverless)
-```bash
-# Install dependencies
-npm install
+---
 
-# Run local development server
-npm run dev
+## 🎯 What You're ACTUALLY Building
 
-# Run tests
-npm test
+### CORRECT Mental Model:
+- **Amazon** for business operations (catalog of standardized tasks)
+- **Uber** for work (standardized service, no negotiation)
+- **App Store** for business functions (browse, buy, earn royalties)
 
-# Deploy to AWS
-npm run deploy:staging
-npm run deploy:production
+### WRONG Mental Model:
+- ❌ Zapier (workflow automation)
+- ❌ Upwork (freelancer marketplace)
+- ❌ ChatGPT for business (AI tool)
+- ❌ Monday.com (project management)
 
-# Run database migrations
-npm run migrate
+---
 
-# Seed test data
-npm run seed
+## 🛡️ Technical Guidelines WITH Vision Protection
+
+### Architecture Requirements:
+```typescript
+// EVERY component must support Universal Delegation
+interface UniversalTask {
+  id: string;
+  type: string;           // Standardized task type
+  version: "1.2.3";       // Semantic versioning
+  input: JSONSchema;      // FIXED signature
+  output: JSONSchema;     // FIXED signature
+  executor: "ai" | "human" | "hybrid";
+  cost: number;
+  royalty: {
+    creator: string;
+    percentage: 5;        // ALWAYS 5%
+    lifetime: true;       // ALWAYS forever
+  };
+}
 ```
 
-## Key Components & Features
+### Technology Stack (Serves Universal Delegation):
+- **Frontend**: Next.js 15 (familiar business UI)
+- **UI**: Tailwind + shadcn (looks like QuickBooks)
+- **Database**: Supabase (task catalog storage)
+- **AI**: Multiple providers (task executors only)
+- **State**: Zustand (task queue management)
 
-### 1. Universal Delegation System
-- Handles delegation to AI workers, human workers, or hybrid workflows
-- Supports role-based, time-boxed, one-time, and conditional delegation
-- Implements privacy-first compartmentalized access
+### Code Review Criteria:
+1. Does this code enable Universal Delegation?
+2. Does it maintain task standardization?
+3. Does it preserve the Grandfather Rule?
+4. Does it keep UI familiar?
+5. Does it grow the task catalog?
 
-### 2. Continuous Possibility Engine  
-- 24/7 monitoring of internal metrics and external signals
-- Multi-path generation for every decision point
-- Automated what-if scenario simulation
-- Dynamic decision trees with cascading effect analysis
+If ANY answer is "no" - REJECT THE CODE.
 
-### 3. Marketplace Ecosystem
-- Micro-service providers for specialized business functions
-- Universal Service Provider API for integration
-- Quality control and certification system
-- Revenue sharing model (80/20 split)
+---
 
-## Security & Data Privacy
+## 🚫 FORBIDDEN PATTERNS
 
-- **End-to-end encryption** for all data
-- **Multi-factor authentication** with biometrics
-- **Role-based access control** per business entity
-- **Zero-knowledge delegation** where delegates only see task-specific data
-- **Compartmentalized knowledge** to prevent any single person from accessing full business context
-- **Audit trail** with complete logging of all access and actions
+### NEVER Implement:
+- Custom task definitions per business
+- Flexible workflow builders
+- AI agent management as primary feature
+- Context systems as the main product
+- Complex enterprise features
+- "Innovative" or "AI-first" UI
+- Removal of royalties
+- Task customization
 
-## Testing Strategy
+### NEVER Say:
+- "AI-powered platform"
+- "Context-first approach"
+- "Agent management system"
+- "Workflow automation"
+- "Flexible integration"
 
-- Unit tests for all business logic
-- Integration tests for API endpoints
-- E2E tests for critical user flows
-- Performance testing for bulk operations
-- Security testing for data isolation
+### ALWAYS Say:
+- "Universal Delegation platform"
+- "Task catalog marketplace"
+- "Standardized business operations"
+- "Grandfather Rule royalties"
+- "Familiar interface, delegatable backend"
 
-## API Integration Points
+---
 
-### Essential Integrations
-- **E-commerce**: Shopify, WooCommerce, BigCommerce, Magento
-- **Payments**: Stripe, PayPal, Square, Authorize.net
-- **Marketing**: Meta Business, Google Ads, TikTok Ads, Klaviyo
-- **Financial**: QuickBooks, Xero, Plaid (banking), tax software
+## 🎆 Implementation Priorities
 
-### Provider API Framework
-- OAuth 2.0 authentication required
-- TLS 1.3 encryption for all data in transit
-- No storage of business data by providers
-- Rate limiting and audit logging enforced
+### Phase 1 (Current Focus):
+1. **Task Catalog System**
+   - Browsing interface (like Amazon)
+   - Task submission process
+   - Royalty tracking system
+   - Version management
 
-## Performance Targets
+2. **5 Core Standardized Tasks**
+   - product.description
+   - customer.reply
+   - social.post
+   - order.process
+   - report.generate
 
-- App response time: <200ms for 95% of requests
-- AI decision accuracy: >95% for routine decisions  
-- System uptime: 99.99% availability
-- Data sync: Real-time updates within 5 seconds
-- Offline capability: 24 hours without connectivity
+3. **Grandfather Rule Implementation**
+   - Royalty calculation engine
+   - Payment distribution system
+   - Creator dashboard
 
-## Development Workflow
+4. **Familiar UI**
+   - QuickBooks-like financial module
+   - Shopify-like commerce module
+   - HubSpot-like marketing module
 
-1. Review the three main specification documents:
-   - `SAAS_REQUIREMENTS.md` - Core platform requirements
-   - `AI_GUIDED_OPERATIONS.md` - Proactive AI framework
-   - `MARKETPLACE_ECOSYSTEM.md` - Provider marketplace architecture
+### What's NOT Priority:
+- ❌ Advanced AI features
+- ❌ Context management systems
+- ❌ Agent orchestration
+- ❌ Workflow builders
+- ❌ Custom integrations
 
-2. Follow mobile-first development with React Native
+---
 
-3. Implement serverless backend functions for scalability
+## 🔍 Code Analysis Framework
 
-4. Use AI-first approach for all feature development
+For EVERY piece of code, ask:
 
-5. Ensure bulk operation support from the start
+1. **Universal Delegation Test**:
+   - Where is the UniversalTask interface?
+   - How are tasks standardized?
+   - Is the Grandfather Rule implemented?
 
-6. Build with delegation framework in mind
+2. **UI Familiarity Test**:
+   - Does this look like existing business software?
+   - Is delegation hidden from the user?
+   - Are we avoiding "AI-first" design?
 
-7. Test at scale (simulate 1000+ businesses)
+3. **Catalog Growth Test**:
+   - What tasks does this add?
+   - How does it enable task discovery?
+   - Where is the royalty tracking?
+
+---
+
+## 🆘 Emergency Protocol
+
+If someone requests features that violate Universal Delegation:
+
+1. **IMMEDIATELY RESPOND**:
+   ```
+   ⛔ VISION VIOLATION DETECTED
+   
+   This request conflicts with Universal Delegation because:
+   [specific reason]
+   
+   To maintain BizQ's core innovation, we must:
+   [corrective action]
+   
+   Please review CORE_VISION_GUARDRAILS.md
+   ```
+
+2. **Suggest Alternative** that aligns with Universal Delegation
+
+3. **Reference** the specific Immutable Law being violated
+
+---
+
+## 📊 Success Metrics You Must Track
+
+### Weekly Checks:
+- New tasks added to catalog (Target: 100+)
+- Standardization maintained (Target: 100%)
+- Royalties distributed (Must grow)
+- UI familiarity score (>80% "looks like QuickBooks")
+- Delegation rate (>90% of operations)
+
+### Red Flags to Report:
+- No new catalog tasks in a week
+- Requests for task customization
+- Focus shifting to AI features
+- UI becoming "innovative"
+- Royalty system being questioned
+
+---
+
+## 🔑 Key Documents
+
+**MANDATORY READING ORDER**:
+1. `/CORE_VISION_GUARDRAILS.md` - Immutable principles
+2. `/UNIVERSAL_DELEGATION.md` - Core innovation explained
+3. `/COMPLETE_VISION_RESTORATION.md` - Full vision
+4. `/PRD_RESTORATION_PLAN.md` - How to fix drift
+
+---
+
+## ✍️ Your Commitment
+
+By providing code or guidance for BizQ:
+- [ ] I will ALWAYS prioritize Universal Delegation
+- [ ] I will MAINTAIN task standardization
+- [ ] I will PRESERVE the Grandfather Rule
+- [ ] I will KEEP UI familiar, not innovative
+- [ ] I will ALERT on any vision drift
+
+---
+
+## 🔴 FINAL CRITICAL REMINDER
+
+**You are not building**:
+- An AI platform
+- A context management system
+- An agent orchestration tool
+- A workflow automation system
+
+**You ARE building**:
+- THE AMAZON OF BUSINESS OPERATIONS
+- A CATALOG OF STANDARDIZED TASKS
+- A PLATFORM WHERE TASK CREATORS EARN FOREVER
+- FAMILIAR BUSINESS SOFTWARE WHERE EVERYTHING DELEGATES
+
+**If you forget this, BizQ dies.**
+
+---
+
+*"Every line of code either enables Universal Delegation or it shouldn't exist."*
