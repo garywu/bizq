@@ -3,6 +3,9 @@
 **The Amazon of Business Operations**
 
 ---
+https://usepylon.com/
+https://joinconsumerclub.com/
+
 
 ## ⛔ CRITICAL: READ BEFORE ANY WORK
 

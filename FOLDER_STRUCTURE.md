@@ -4,35 +4,45 @@
 
 ```
 bizq/
-├── 🔴 CRITICAL VISION FILES (Root - Never Move)
+├── 🔴 CRITICAL FILES (Root - Never Move)
 │   ├── README.md                          # First thing everyone sees
 │   ├── CLAUDE.md                          # AI instructions with guardrails
-│   └── CORE_VISION_GUARDRAILS.md          # Immutable laws
+│   ├── CORE_VISION_GUARDRAILS.md          # Immutable laws
+│   ├── NAVIGATION.md                      # Quick access to all docs
+│   ├── FOLDER_STRUCTURE.md                # This file - organization guide
+│   ├── package.json                       # Node.js dependencies
+│   ├── package-lock.json                  # Locked dependencies
+│   └── .gitignore                         # Git ignore rules
 │
-├── 📚 docs/
-│   ├── vision/                            # Core vision & protection
+├── 📚 docs/                               # All documentation
+│   ├── vision/                            # Core vision & protection (5 files)
 │   │   ├── UNIVERSAL_DELEGATION.md        # Core innovation explained
 │   │   ├── COMPLETE_VISION_RESTORATION.md # Full vision preserved
 │   │   ├── VISION_PROTECTION_SUMMARY.md   # Defense system overview
-│   │   └── PRD_RESTORATION_PLAN.md        # How to fix PRD drift
+│   │   ├── PRD_RESTORATION_PLAN.md        # How to fix PRD drift
+│   │   └── UNIFIED_VISION.md              # Consolidated vision
 │   │
-│   ├── architecture/                      # Technical architecture
+│   ├── architecture/                      # Technical architecture (8 files)
 │   │   ├── TECHNICAL_ARCHITECTURE.md      # System design
 │   │   ├── DATABASE_SCHEMA.md             # Data structure
 │   │   ├── AI_TASK_ROUTING.md             # Task routing system
 │   │   ├── CONTEXT_VALIDATION_SYSTEM.md   # Context & validation
 │   │   ├── AGENT_MANAGEMENT_SYSTEM.md     # Agent lifecycle
-│   │   └── MONOREPO_STRUCTURE.md          # Code organization
+│   │   ├── MONOREPO_STRUCTURE.md          # Code organization
+│   │   ├── SEAMLESS_AI_WORKFLOW.md        # AI integration patterns
+│   │   └── TECH_STACK.md                  # Technology choices
 │   │
-│   ├── implementation/                    # Development plans
-│   │   ├── IMPLEMENTATION_PLAN.md         # 8-week detailed plan
+│   ├── implementation/                    # Development plans (8 files)
 │   │   ├── IMPLEMENTATION_ROADMAP.md      # 16-week roadmap
+│   │   ├── IMPLEMENTATION_PLAN.md         # 8-week detailed plan
 │   │   ├── BUILD_ROADMAP.md               # Build phases
 │   │   ├── PHASE_1_MVP.md                 # MVP specification
 │   │   ├── MVP_IMPLEMENTATION_PLAN.md     # MVP details
-│   │   └── MVP_TECHNICAL_SPEC.md          # MVP technical specs
+│   │   ├── MVP_TECHNICAL_SPEC.md          # MVP technical specs
+│   │   ├── MVP_1PERCENT.md                # Minimal MVP
+│   │   └── CORE_OPERATIONS_TASKS.md       # Task definitions
 │   │
-│   ├── analysis/                          # Research & analysis
+│   ├── analysis/                          # Research & analysis (6 files)
 │   │   ├── MARKET_ANALYSIS.md             # Market research
 │   │   ├── COMPETITOR_PAIN_POINTS_ANALYSIS.md
 │   │   ├── CONTENT_FIRST_PLATFORM_ANALYSIS.md
@@ -40,29 +50,58 @@ bizq/
 │   │   ├── MIDDAY_ANALYSIS.md             # Prior art analysis
 │   │   └── AI_SDK_TOOLS_RESEARCH.md
 │   │
-│   └── legacy/                            # Historical/outdated docs
+│   └── legacy/                            # Historical docs (6 files)
 │       ├── MASTER_PRD.md                  # Needs restoration
 │       ├── AI_GUIDED_OPERATIONS.md        # Original concepts
 │       ├── MARKETPLACE_ECOSYSTEM.md       # Early marketplace ideas
-│       └── [other superseded docs]
+│       ├── SAAS_REQUIREMENTS.md           # Original requirements
+│       ├── LITELLM_CLAUDE_INTEGRATION.md  # Technical exploration
+│       └── INDEX.md                       # Old navigation
 │
-├── 💻 src/                                # Source code (when implemented)
-│   ├── core/                              # Core Universal Delegation
-│   │   ├── task-catalog/                  # Task standardization
-│   │   ├── grandfather-rule/              # Royalty system
-│   │   └── delegation-engine/             # Task routing
+├── 💻 src/                                # Source code
+│   ├── core/                              # Core implementations
+│   │   ├── bizq-core-ai.ts
+│   │   ├── bizq-core-v2.ts
+│   │   ├── marketplace.ts
+│   │   ├── pattern-detector.ts
+│   │   └── settings.ts
 │   │
-│   ├── ui/                                # Familiar business UI
-│   │   ├── financial/                     # QuickBooks-like
-│   │   ├── commerce/                      # Shopify-like
-│   │   └── marketing/                     # HubSpot-like
+│   ├── providers/                         # AI provider implementations
+│   │   ├── ai-manager.ts
+│   │   ├── ai-provider.ts
+│   │   ├── ai-provider-claude-code.ts
+│   │   ├── ai-provider-headless.ts
+│   │   └── ai-provider-litellm.ts
 │   │
-│   ├── api/                               # API layer
-│   └── services/                          # Backend services
+│   └── experimental/                      # Experimental code
+│       ├── claude-api-server.ts
+│       ├── claude-cli-working.ts
+│       ├── claude-code-test.ts
+│       ├── claude-code-test-v2.ts
+│       ├── claude-sdk-proper.ts
+│       ├── integrated-demo.ts
+│       └── web-interface.ts
+│
+├── 🧪 tests/                              # Test files
+│   ├── test-ai-integration.ts
+│   ├── test-ai-integration-litellm.ts
+│   ├── test-bizq-provider.ts
+│   ├── test-claude-cli-direct.ts
+│   ├── test-claude-code-simple.ts
+│   └── test-claude-print-mode.ts
+│
+├── 📜 scripts/                            # Scripts and utilities
+│   ├── start-bizq-with-claude-server.sh
+│   └── servers/
+│       └── claude_server.py
 │
 ├── ⚙️ config/                             # Configuration files
-├── 📜 scripts/                            # Build & deployment scripts
-└── 🧪 tests/                              # Test files
+│   ├── bizq.config.json
+│   ├── requirements.txt
+│   └── codex_security_audit.log
+│
+├── 📦 node_modules/                       # Dependencies (git-ignored)
+└── 🗄️ ARCHIVED/                           # Archived experiments
 ```
 
 ## 🚨 File Organization Rules
