@@ -1,116 +1,78 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>BizQ - Universal Delegation Platform</title>
-    <style>
-        body {
-            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
-            margin: 0;
-            padding: 0;
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-            color: white;
-            min-height: 100vh;
-        }
-        .hero {
-            text-align: center;
-            padding: 4rem 2rem;
-            max-width: 800px;
-            margin: 0 auto;
-        }
-        h1 {
-            font-size: 4rem;
-            margin-bottom: 1rem;
-            background: linear-gradient(45deg, #fff, #e0e7ff);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            background-clip: text;
-        }
-        .subtitle {
-            font-size: 1.5rem;
-            opacity: 0.9;
-            margin-bottom: 2rem;
-        }
-        .cta {
-            background: white;
-            color: #667eea;
-            padding: 1rem 2rem;
-            border-radius: 50px;
-            text-decoration: none;
-            font-weight: bold;
-            display: inline-block;
-            margin: 1rem;
-            transition: transform 0.2s;
-        }
-        .cta:hover {
-            transform: translateY(-2px);
-        }
-        .features {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 2rem;
-            padding: 4rem 2rem;
-            max-width: 1200px;
-            margin: 0 auto;
-        }
-        .feature {
-            background: rgba(255, 255, 255, 0.1);
-            padding: 2rem;
-            border-radius: 12px;
-            backdrop-filter: blur(10px);
-            text-align: center;
-        }
-        .feature h3 {
-            font-size: 1.5rem;
-            margin-bottom: 1rem;
-        }
-        .coming-soon {
-            text-align: center;
-            padding: 4rem 2rem;
-            opacity: 0.8;
-        }
-    </style>
-</head>
-<body>
-    <div class="hero">
-        <h1>🚀 BizQ</h1>
-        <p class="subtitle">The Amazon of Business Operations</p>
-        <p>Transform every business operation into a standardized, delegatable task fulfilled by AI, humans, or hybrid combinations through a universal marketplace.</p>
-        <a href="#" class="cta">Get Started</a>
-        <a href="#" class="cta">Learn More</a>
-    </div>
+  <head>
+    <meta charset="UTF-8" />
+    <link
+      rel="icon"
+      type="image/svg+xml"
+      href="./src/assets/icon.ico"
+    />
+    <!-- href="/vite.svg" -->
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0"
+    />
 
-    <div class="features">
-        <div class="feature">
-            <h3>🎯 Universal Delegation</h3>
-            <p>Every business task becomes standardized and delegatable - from customer replies to financial analysis.</p>
-        </div>
-        <div class="feature">
-            <h3>🤖 AI-Human Hybrid</h3>
-            <p>Tasks are fulfilled by AI when confident, routed to human specialists when expertise is needed.</p>
-        </div>
-        <div class="feature">
-            <h3>🏪 Task Marketplace</h3>
-            <p>Browse, buy, and sell standardized business operations like products on Amazon.</p>
-        </div>
-        <div class="feature">
-            <h3>💰 Grandfather Rule</h3>
-            <p>Task creators earn 5% royalty on every execution forever - even after AI takes over.</p>
-        </div>
-        <div class="feature">
-            <h3>⚡ Familiar UI</h3>
-            <p>Looks like QuickBooks but delegates everything invisibly behind the scenes.</p>
-        </div>
-        <div class="feature">
-            <h3>📊 Performance Tracking</h3>
-            <p>Monitor task completion rates, costs, and optimize your business operations.</p>
-        </div>
-    </div>
+    <!-- Primary Meta Tags -->
+    <title>Shadcn/React - Landing template</title>
+    <meta
+      name="title"
+      content="Shadcn/React - Landing template"
+    />
+    <meta
+      name="description"
+      content="Free Shadcn landing page for React developers"
+    />
+    <!-- Open Graph / Facebook -->
+    <meta
+      property="og:type"
+      content="website"
+    />
+    <meta
+      property="og:url"
+      content="https://github.com/leoMirandaa/shadcn-landing-page.git"
+    />
+    <meta
+      property="og:title"
+      content="Shadcn/React - Landing template"
+    />
+    <meta
+      property="og:description"
+      content="Free Shadcn landing page for React developers"
+    />
+    <meta
+      property="og:image"
+      content="https://res.cloudinary.com/dbzv9xfjp/image/upload/v1705560686/og-images/shadc-react_gketpd.jpg"
+    />
 
-    <div class="coming-soon">
-        <h2>Marketing Site Coming Soon</h2>
-        <p>This will be a beautiful landing page built with modern web technologies.</p>
-    </div>
-</body>
+    <!-- Twitter -->
+    <meta
+      name="twitter:card"
+      content="summary_large_image"
+    />
+
+    <meta
+      name="twitter:url"
+      content="https://github.com/leoMirandaa/shadcn-landing-page.git"
+    />
+    <meta
+      name="twitter:title"
+      content="Shadcn/React - Landing template"
+    />
+    <meta
+      name="twitter:description"
+      content="Free Shadcn landing page for React developers"
+    />
+    <meta
+      name="twitter:image"
+      content="https://res.cloudinary.com/dbzv9xfjp/image/upload/v1705560686/og-images/shadc-react_gketpd.jpg"
+    />
+  </head>
+  <body>
+    <div id="root"></div>
+    <script
+      type="module"
+      src="/src/main.tsx"
+    ></script>
+  </body>
 </html>
