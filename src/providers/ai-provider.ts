@@ -7,15 +7,7 @@
 
 import { query } from '@instantlyeasy/claude-code-sdk-ts';
 import { EventEmitter } from 'events';
-
-export interface AIResponse {
-  success: boolean;
-  result: any;
-  confidence: number;
-  tokensUsed?: number;
-  sessionId?: string;
-  error?: string;
-}
+import { AIResponse } from '../types';
 
 export class BizQAIProvider extends EventEmitter {
   private sessionCache: Map<string, string> = new Map();

@@ -5,36 +5,7 @@
  */
 
 import { EventEmitter } from 'events';
-
-export interface UniversalTask {
-  businessId: string;
-  content: string;
-  type: string;
-  credits?: number;
-  priority?: 'low' | 'medium' | 'high' | 'urgent';
-  metadata?: Record<string, any>;
-}
-
-interface WorkerProfile {
-  id: string;
-  type: 'ai' | 'human' | 'hybrid';
-  capabilities: string[];
-  costPerTask: number;
-  avgResponseTime: number;
-  successRate: number;
-}
-
-interface TaskDecomposition {
-  subtasks: Array<{
-    id: string;
-    content: string;
-    type: string;
-    dependencies: string[];
-    estimatedCredits: number;
-  }>;
-  execution_mode: 'sequential' | 'parallel';
-  total_credits: number;
-}
+import { UniversalTask, WorkerProfile, TaskDecomposition } from '../types';
 
 export default class BizQCoreV2 extends EventEmitter {
   private cache: Map<string, any> = new Map();

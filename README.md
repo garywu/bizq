@@ -112,6 +112,74 @@ bizq/
 
 ---
 
+## Project Structure
+
+```
+bizq/
+├── ARCHIVED/           # Historical docs (UPPERCASE)
+├── docs/              # Documentation (SCREAMING_SNAKE_CASE.md)
+│   ├── analysis/      # Market & technical analysis
+│   ├── architecture/  # System design & architecture
+│   ├── competitive-analysis/  # Competitor research
+│   ├── implementation/ # Development plans & specs
+│   ├── legacy/        # Deprecated documentation
+│   └── vision/        # Core business vision
+├── src/               # Source code
+│   ├── core/          # Core business logic
+│   ├── providers/     # AI provider implementations
+│   ├── experimental/  # Prototypes & demos
+│   ├── types/         # Shared TypeScript interfaces
+│   └── utils/         # Common utilities
+├── tests/             # Test files (test-*.ts)
+├── config/            # Configuration files
+├── scripts/           # Automation scripts
+├── AGENTS.md          # Agent coding guidelines
+├── CONTRIBUTING.md    # Contribution guidelines
+└── package.json       # Node.js dependencies & scripts
+```
+
+### Key Directories
+- **`docs/vision/`**: Core business vision (MANDATORY reading)
+- **`src/core/`**: Core business logic and domain models
+- **`src/providers/`**: AI provider implementations
+- **`tests/`**: Test files with individual test execution
+
+---
+
+## Development Setup
+
+### Prerequisites
+- Node.js >= 18.0.0
+- npm or bun package manager
+
+### Installation
+```bash
+git clone <repository-url>
+cd bizq
+npm install
+```
+
+### Development Commands
+```bash
+npm run dev          # Start dev server with hot reload
+npm run build        # Build for production
+npm run typecheck    # TypeScript type checking
+npm run lint         # Run ESLint
+npm run test         # Run all tests
+npm run format       # Format code with Prettier
+```
+
+### Testing
+```bash
+# Run all tests
+npm run test
+
+# Run specific test
+npx tsx tests/test-ai-integration.ts
+```
+
+---
+
 ## Quick Start
 
 ```bash
