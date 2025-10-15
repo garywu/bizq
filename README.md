@@ -112,11 +112,18 @@ bizq/
 
 ---
 
-## Project Structure
+## Monorepo Structure
 
 ```
 bizq/
-├── ARCHIVED/           # Historical docs (UPPERCASE)
+├── packages/
+│   └── backend/       # Backend services (@bizq/backend)
+│       ├── src/       # Source code
+│       ├── tests/     # Test files
+│       └── config/    # Configuration
+├── apps/
+│   ├── app/           # Full-stack application (@bizq/app)
+│   └── marketing/     # Marketing website (@bizq/marketing)
 ├── docs/              # Documentation (SCREAMING_SNAKE_CASE.md)
 │   ├── analysis/      # Market & technical analysis
 │   ├── architecture/  # System design & architecture
@@ -124,18 +131,10 @@ bizq/
 │   ├── implementation/ # Development plans & specs
 │   ├── legacy/        # Deprecated documentation
 │   └── vision/        # Core business vision
-├── src/               # Source code
-│   ├── core/          # Core business logic
-│   ├── providers/     # AI provider implementations
-│   ├── experimental/  # Prototypes & demos
-│   ├── types/         # Shared TypeScript interfaces
-│   └── utils/         # Common utilities
-├── tests/             # Test files (test-*.ts)
-├── config/            # Configuration files
 ├── scripts/           # Automation scripts
 ├── AGENTS.md          # Agent coding guidelines
 ├── CONTRIBUTING.md    # Contribution guidelines
-└── package.json       # Node.js dependencies & scripts
+└── package.json       # Monorepo management
 ```
 
 ### Key Directories
@@ -161,12 +160,24 @@ npm install
 
 ### Development Commands
 ```bash
-npm run dev          # Start dev server with hot reload
-npm run build        # Build for production
-npm run typecheck    # TypeScript type checking
-npm run lint         # Run ESLint
-npm run test         # Run all tests
-npm run format       # Format code with Prettier
+# Backend development
+npm run dev              # Start backend dev server
+npm run build:backend    # Build backend
+npm run test             # Run backend tests
+
+# App development (placeholder)
+npm run dev:app          # Start app dev server (placeholder)
+
+# Marketing development (placeholder)
+npm run dev:marketing    # Start marketing dev server (placeholder)
+
+# All services
+npm run dev:all          # Start all services concurrently
+
+# Code quality
+npm run typecheck        # TypeScript type checking
+npm run lint            # Run ESLint
+npm run format          # Format code with Prettier
 ```
 
 ### Testing

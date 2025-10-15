@@ -1,0 +1,12 @@
+{
+  "name": "@bizq/app",
+  "version": "0.1.0",
+  "description": "BizQ Full-Stack Application",
+  "private": true,
+  "scripts": {
+    "dev": "npx serve . -p 3000",
+    "build": "echo 'Build placeholder - will be implemented with Next.js/React'",
+    "start": "npx serve . -p 3000",
+    "preview": "npx serve . -p 3000"
+  }
+}

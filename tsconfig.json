@@ -26,9 +26,9 @@
     }
   },
   "include": [
-    "src/**/*",
-    "tests/**/*",
-    "config/**/*"
+    "packages/backend/src/**/*",
+    "packages/backend/tests/**/*",
+    "packages/backend/config/**/*"
   ],
   "exclude": [
     "node_modules",

@@ -1,0 +1,12 @@
+{
+  "name": "@bizq/marketing",
+  "version": "0.1.0",
+  "description": "BizQ Marketing Website",
+  "private": true,
+  "scripts": {
+    "dev": "npx serve . -p 3001",
+    "build": "echo 'Build placeholder - will be implemented with Astro/Next.js'",
+    "start": "npx serve . -p 3001",
+    "preview": "npx serve . -p 3001"
+  }
+}
