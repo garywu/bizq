@@ -4,7 +4,7 @@
  * Test BizQ Claude Code Provider
  */
 
-import { ClaudeCodeProvider } from './ai-provider-claude-code.js';
+import { ClaudeCodeProvider } from '../src/providers/ai-provider-claude-code';
 
 async function testBizQProvider() {
   console.log('🧪 Testing BizQ Claude Code Provider...');

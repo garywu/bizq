@@ -8,11 +8,11 @@
 import express from 'express';
 import { createServer } from 'http';
 import { Server } from 'socket.io';
-import BizQCoreV2 from './bizq-core-v2';
-import BizQMarketplace from './marketplace';
-import PatternDetector from './pattern-detector';
-import BizQAIManager from './ai-manager';
-import { getSettings, printSettings } from './settings';
+import BizQCoreV2 from '../core/bizq-core-v2';
+import BizQMarketplace from '../core/marketplace';
+import PatternDetector from '../core/pattern-detector';
+import BizQAIManager from '../providers/ai-manager';
+import { getSettings, printSettings } from '../core/settings';
 
 // Load configuration
 const config = getSettings();

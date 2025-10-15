@@ -6,7 +6,7 @@
  */
 
 import { EventEmitter } from 'events';
-import BizQAIProvider from './ai-provider';
+import BizQAIProvider from '../providers/ai-provider';
 
 export interface UniversalTask {
   businessId: string;

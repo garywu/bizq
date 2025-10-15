@@ -5,9 +5,9 @@
  * Demonstrates the complete flow: Task submission → AI attempt → Marketplace → Caching → Payments
  */
 
-import BizQCoreV2 from './bizq-core-v2';
-import BizQMarketplace from './marketplace';
-import PatternDetector from './pattern-detector';
+import BizQCoreV2 from '../core/bizq-core-v2';
+import BizQMarketplace from '../core/marketplace';
+import PatternDetector from '../core/pattern-detector';
 
 class IntegratedBizQ {
   private core: BizQCoreV2;

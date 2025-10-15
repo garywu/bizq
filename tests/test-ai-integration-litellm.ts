@@ -5,7 +5,7 @@
  * Tests the complete flow: BizQ -> AI Manager -> LiteLLM -> Claude Code Server -> Claude CLI
  */
 
-import BizQAIManager from './ai-manager';
+import BizQAIManager from '../src/providers/ai-manager';
 
 async function testAIIntegration() {
   console.log('🚀 BizQ AI Integration Test with LiteLLM + Claude Code Server\n');
