@@ -3,33 +3,33 @@
   "version": "0.1.0",
   "description": "BizQ Monorepo - Universal Delegation Platform",
   "private": true,
-  "workspaces": [
-    "packages/*",
-    "apps/*"
-  ],
   "scripts": {
-    "dev": "npm run dev --workspace=@bizq/backend",
-    "dev:app": "npm run dev --workspace=@bizq/app",
-    "dev:marketing": "npm run dev --workspace=@bizq/marketing",
-    "dev:all": "concurrently \"npm run dev\" \"npm run dev:app\" \"npm run dev:marketing\"",
-    "build": "npm run build --workspaces",
-    "build:backend": "npm run build --workspace=@bizq/backend",
-    "build:app": "npm run build --workspace=@bizq/app",
-    "build:marketing": "npm run build --workspace=@bizq/marketing",
-    "typecheck": "npm run typecheck --workspace=@bizq/backend",
-    "lint": "npm run lint --workspace=@bizq/backend",
-    "lint:fix": "npm run lint:fix --workspace=@bizq/backend",
-    "format": "npm run format --workspace=@bizq/backend",
-    "test": "npm run test --workspace=@bizq/backend",
-    "clean": "npm run clean --workspaces",
-    "install:all": "npm install"
+    "dev": "pnpm --filter=@bizq/backend dev",
+    "dev:app": "pnpm --filter=@bizq/app dev",
+    "dev:marketing": "pnpm --filter=@bizq/marketing dev",
+    "dev:all": "concurrently \"pnpm --filter=@bizq/backend dev\" \"pnpm --filter=@bizq/app dev\" \"pnpm --filter=@bizq/marketing dev\"",
+    "build": "pnpm --recursive build",
+    "build:backend": "pnpm --filter=@bizq/backend build",
+    "build:app": "pnpm --filter=@bizq/app build",
+    "build:marketing": "pnpm --filter=@bizq/marketing build",
+    "typecheck": "pnpm --filter=@bizq/backend typecheck",
+    "lint": "pnpm --filter=@bizq/backend lint",
+    "lint:fix": "pnpm --filter=@bizq/backend lint:fix",
+    "format": "pnpm --filter=@bizq/backend format",
+    "test": "pnpm --filter=@bizq/backend test",
+    "clean": "pnpm --recursive clean",
+    "install:all": "pnpm install"
   },
   "devDependencies": {
+    "@types/react": "^18.3.26",
+    "@types/react-dom": "^18.3.7",
     "@typescript-eslint/eslint-plugin": "^6.0.0",
     "@typescript-eslint/parser": "^6.0.0",
     "concurrently": "^8.0.0",
     "eslint": "^8.0.0",
-    "prettier": "^3.0.0"
+    "prettier": "^3.0.0",
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1"
   },
   "engines": {
     "node": ">=18.0.0",

@@ -1,0 +1,103 @@
+{
+  "metadata": {
+    "totalCount": 105,
+    "platform": "10web",
+    "source": "Industry Explorer",
+    "extractedAt": "2025-01-27T19:54:28.940Z",
+    "url": "https://10web.io/ai-website-builder/industries/",
+    "extractionMethod": "Browser automation with Playwright",
+    "description": "Complete list of industries from 10Web AI Website Builder Industry Explorer"
+  },
+  "industries": [
+    {
+      "id": 1,
+      "title": "online fashion boutique",
+      "slug": "online-fashion-boutique",
+      "description": "Launch your stylish online store effortlessly with 10Web AI Online Fashion Boutique Website Builder.",
+      "url": "https://10web.io/ai-website-builder/online-fashion-boutique/",
+      "category": "website_builder",
+      "platform": "10web"
+    },
+    {
+      "id": 2,
+      "title": "video portfolio",
+      "slug": "video-portfolio",
+      "description": "Showcase your creativity with 10Web AI Video Portfolio Website Builder.",
+      "url": "https://10web.io/ai-website-builder/video-portfolio/",
+      "category": "website_builder",
+      "platform": "10web"
+    },
+    {
+      "id": 3,
+      "title": "escape room",
+      "slug": "escape-room",
+      "description": "Design an immersive escape room experience with 10Web AI Escape Room Website Builder.",
+      "url": "https://10web.io/ai-website-builder/escape-room/",
+      "category": "website_builder",
+      "platform": "10web"
+    },
+    {
+      "id": 4,
+      "title": "language tutor",
+      "slug": "language-tutor",
+      "description": "Build your interactive language learning platform with 10Web AI Language Tutor Website Builder.",
+      "url": "https://10web.io/ai-website-builder/language-tutor/",
+      "category": "website_builder",
+      "platform": "10web"
+    },
+    {
+      "id": 5,
+      "title": "herb shop",
+      "slug": "herb-shop",
+      "description": "Create your online herb shop effortlessly with 10Web AI Herb Shop Website Builder.",
+      "url": "https://10web.io/ai-website-builder/herb-shop/",
+      "category": "website_builder",
+      "platform": "10web"
+    },
+    {
+      "id": 6,
+      "title": "alcoholic beverage store",
+      "slug": "alcoholic-beverage-store",
+      "description": "Build your online alcoholic beverage store seamlessly with 10Web AI Alcoholic Beverage Store Website Builder.",
+      "url": "https://10web.io/ai-website-builder/alcoholic-beverage-store/",
+      "category": "website_builder",
+      "platform": "10web"
+    },
+    {
+      "id": 7,
+      "title": "reptile store",
+      "slug": "reptile-store",
+      "description": "Create your ultimate reptile store online with 10Web AI Reptile Store Website Builder.",
+      "url": "https://10web.io/ai-website-builder/reptile-store/",
+      "category": "website_builder",
+      "platform": "10web"
+    },
+    {
+      "id": 8,
+      "title": "meditation blog",
+      "slug": "meditation-blog",
+      "description": "Create a serene space for mindfulness with 10Web AI Meditation Blog Website Builder.",
+      "url": "https://10web.io/ai-website-builder/meditation-blog/",
+      "category": "website_builder",
+      "platform": "10web"
+    },
+    {
+      "id": 9,
+      "title": "museum",
+      "slug": "museum",
+      "description": "Showcase your art collection beautifully with 10Web AI Museum Website Builder.",
+      "url": "https://10web.io/ai-website-builder/museum/",
+      "category": "website_builder",
+      "platform": "10web"
+    },
+    {
+      "id": 10,
+      "title": "French language school",
+      "slug": "french-language-school",
+      "description": "Create an engaging online platform for your French language school with 10Web AI French Language School Website Builder.",
+      "url": "https://10web.io/ai-website-builder/french-language-school/",
+      "category": "website_builder",
+      "platform": "10web"
+    }
+  ]
+}
