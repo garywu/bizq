@@ -1,0 +1,41 @@
+{
+  "name": "bizq-api-gateway",
+  "main": "src/index.ts",
+  "compatibility_date": "2024-01-15",
+  "compatibility_flags": ["nodejs_compat"],
+
+  "d1_databases": [
+    {
+      "binding": "DB",
+      "database_name": "api-gateway-db",
+      "database_id": "create-new-database"
+    }
+  ],
+
+  "kv_namespaces": [
+    {
+      "binding": "CACHE",
+      "id": "create-new-kv-namespace",
+      "preview_id": "create-new-kv-namespace"
+    }
+  ],
+
+  "vars": {
+    "ENVIRONMENT": "development",
+    "RATE_LIMIT_REQUESTS": "100",
+    "RATE_LIMIT_WINDOW": "3600000"
+  },
+
+  "routes": [
+    {
+      "pattern": "api.bizq.com/gateway/*",
+      "zone_name": "bizq.com"
+    }
+  ],
+
+  "triggers": {
+    "crons": [
+      "0 */6 * * *"  // Clean up expired cache entries every 6 hours
+    ]
+  }
+}
