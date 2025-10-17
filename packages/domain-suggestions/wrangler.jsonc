@@ -1,0 +1,41 @@
+{
+  "name": "domain-suggestions",
+  "main": "src/index.ts",
+  "compatibility_date": "2024-01-15",
+  "compatibility_flags": ["nodejs_compat"],
+
+  "d1_databases": [
+    {
+      "binding": "DB",
+      "database_name": "domain-suggestions-db",
+      "database_id": "7a456543-847f-43da-9707-a442507ad627"
+    }
+  ],
+
+  "kv_namespaces": [
+    {
+      "binding": "CACHE",
+      "id": "4f6d437b2321465189c787465274c344",
+      "preview_id": "ceb8d03961f643de9e87549967d4f100"
+    }
+  ],
+
+  "vars": {
+    "OPENAI_API_KEY": "your-openai-api-key",
+    "IP2LOCATION_API_KEY": "your-ip2location-api-key",
+    "DOMAINS_INDEX_API_KEY": "your-domains-index-api-key"
+  },
+
+  "routes": [
+    {
+      "pattern": "api.bizq.com/domains/*",
+      "zone_name": "bizq.com"
+    }
+  ],
+
+  "triggers": {
+    "crons": [
+      "0 2 * * *"  // Daily at 2 AM UTC for bulk data ingestion
+    ]
+  }
+}
