@@ -1,0 +1,15 @@
+{
+  "key": "compile-cloudflare-workers-193ac61c",
+  "data": {
+    "success": true,
+    "outputPath": "./dist",
+    "files": [
+      "index.html"
+    ],
+    "errors": [],
+    "warnings": [],
+    "duration": 57
+  },
+  "timestamp": "2025-10-17T05:23:45.507Z",
+  "ttl": 3600
+}

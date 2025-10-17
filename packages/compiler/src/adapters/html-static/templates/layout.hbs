@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{site.title}}</title>
+    {{#if site.description}}
+    <meta name="description" content="{{site.description}}">
+    {{/if}}
+    <link rel="stylesheet" href="assets/style.css">
+</head>
+<body>
+    <header class="site-header">
+        <nav class="navbar">
+            <div class="container">
+                <a href="/" class="logo">{{site.title}}</a>
+                <ul class="nav-menu">
+                    <li><a href="#hero">Home</a></li>
+                    <li><a href="#features">Features</a></li>
+                    <li><a href="#services">Services</a></li>
+                    <li><a href="#pricing">Pricing</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        {{#if sections.hero}}
+        <section id="hero" class="hero-section">
+            {{{sections.hero}}}
+        </section>
+        {{/if}}
+
+        {{#if sections.features}}
+        <section id="features" class="features-section">
+            {{{sections.features}}}
+        </section>
+        {{/if}}
+
+        {{#if sections.services}}
+        <section id="services" class="services-section">
+            {{{sections.services}}}
+        </section>
+        {{/if}}
+
+        {{#if sections.pricing}}
+        <section id="pricing" class="pricing-section">
+            {{{sections.pricing}}}
+        </section>
+        {{/if}}
+
+        {{#if sections.testimonials}}
+        <section id="testimonials" class="testimonials-section">
+            {{{sections.testimonials}}}
+        </section>
+        {{/if}}
+
+        {{#if sections.faq}}
+        <section id="faq" class="faq-section">
+            {{{sections.faq}}}
+        </section>
+        {{/if}}
+
+        {{#if sections.cta}}
+        <section id="cta" class="cta-section">
+            {{{sections.cta}}}
+        </section>
+        {{/if}}
+    </main>
+
+    <footer class="site-footer">
+        <div class="container">
+            <p>&copy; 2024 {{site.title}}. All rights reserved.</p>
+            {{#if sections.footer}}
+            {{{sections.footer}}}
+            {{/if}}
+        </div>
+    </footer>
+
+    <script src="assets/script.js"></script>
+</body>
+</html>

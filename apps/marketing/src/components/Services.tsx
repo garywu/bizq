@@ -10,21 +10,21 @@ interface ServiceProps {
 
 const serviceList: ServiceProps[] = [
   {
-    title: "Code Collaboration",
+    title: "Task Catalog Marketplace",
     description:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Nisi nesciunt est nostrum omnis ab sapiente.",
+      "Browse and execute standardized business operations. Every task has defined inputs, outputs, and pricing - just like shopping on Amazon.",
     icon: <ChartIcon />,
   },
   {
-    title: "Project Management",
+    title: "AI + Human Workforce",
     description:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Nisi nesciunt est nostrum omnis ab sapiente.",
+      "AI handles routine operations, human experts manage complexity. Tasks automatically route to the best available worker.",
     icon: <WalletIcon />,
   },
   {
-    title: "Task Automation",
+    title: "Creator Royalties",
     description:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Nisi nesciunt est nostrum omnis ab sapiente.",
+      "Standardize a new business task and earn 5% royalties forever. Your innovation becomes a passive income stream.",
     icon: <MagnifierIcon />,
   },
 ];
@@ -36,14 +36,13 @@ export const Services = () => {
         <div>
           <h2 className="text-3xl md:text-4xl font-bold">
             <span className="bg-gradient-to-b from-primary/60 to-primary text-transparent bg-clip-text">
-              Client-Centric{" "}
+              Three-Marketplace{" "}
             </span>
-            Services
+            Architecture
           </h2>
 
           <p className="text-muted-foreground text-xl mt-4 mb-8 ">
-            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Veritatis
-            dolor.
+            Task catalog, AI agents, and human specialists work together to fulfill every business operation.
           </p>
 
           <div className="flex flex-col gap-8">

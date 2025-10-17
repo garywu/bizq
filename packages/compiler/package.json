@@ -1,0 +1,63 @@
+{
+  "name": "@ucc/compiler",
+  "version": "0.1.0",
+  "description": "Universal Content Compiler - Transform content folders into platform-specific websites",
+  "main": "dist/index.js",
+  "bin": {
+    "ucc": "dist/cli/index.js"
+  },
+  "scripts": {
+    "build": "tsc",
+    "dev": "tsc --watch",
+    "test": "jest",
+    "lint": "eslint src/**/*.ts",
+    "clean": "rm -rf dist"
+  },
+  "keywords": [
+    "content",
+    "compiler",
+    "static-site",
+    "markdown",
+    "cms",
+    "headless"
+  ],
+  "author": "BizQ Team",
+  "license": "MIT",
+  "dependencies": {
+    "commander": "^11.0.0",
+    "chalk": "^5.3.0",
+    "ora": "^7.0.1",
+    "fs-extra": "^11.1.1",
+    "glob": "^10.3.10",
+    "gray-matter": "^4.0.3",
+    "marked": "^9.1.2",
+    "handlebars": "^4.7.8",
+    "chokidar": "^3.5.3",
+    "ws": "^8.14.2"
+  },
+  "devDependencies": {
+    "@types/node": "^20.8.0",
+    "@types/fs-extra": "^11.0.1",
+    "@types/glob": "^8.1.0",
+    "@types/marked": "^5.0.1",
+    "@types/handlebars": "^4.1.0",
+    "@types/ws": "^8.5.5",
+    "typescript": "^5.2.2",
+    "jest": "^29.7.0",
+    "@types/jest": "^29.5.5",
+    "eslint": "^8.50.0",
+    "@typescript-eslint/eslint-plugin": "^6.7.3",
+    "@typescript-eslint/parser": "^6.7.3"
+  },
+  "engines": {
+    "node": ">=18.0.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/bizq/universal-content-compiler.git"
+  },
+  "homepage": "https://ucc.bizq.com",
+  "bugs": {
+    "url": "https://github.com/bizq/universal-content-compiler/issues"
+  }
+}

@@ -1,0 +1,74 @@
+{
+  // BizQ Marketing Site Content Configuration
+  // This file maps content files to components and defines the site structure
+
+  "site": {
+    "name": "BizQ Marketing Site",
+    "description": "Universal Delegation Platform for Business Operations",
+    "version": "1.0.0"
+  },
+
+  "sections": {
+    "hero": {
+      "path": "sections/hero",
+      "component": "Hero",
+      "enabled": true,
+      "required": true,
+      "order": 1
+    },
+    "features": {
+      "path": "sections/features",
+      "component": "Features",
+      "enabled": true,
+      "required": true,
+      "order": 2
+    },
+    "services": {
+      "path": "sections/services",
+      "component": "Services",
+      "enabled": true,
+      "required": true,
+      "order": 3
+    },
+    "pricing": {
+      "path": "sections/pricing",
+      "component": "Pricing",
+      "enabled": true,
+      "required": true,
+      "order": 4
+    },
+    "testimonials": {
+      "path": "sections/testimonials",
+      "component": "Testimonials",
+      "enabled": true,
+      "required": true,
+      "order": 5
+    },
+    "faq": {
+      "path": "sections/faq",
+      "component": "FAQ",
+      "enabled": true,
+      "required": true,
+      "order": 6
+    },
+    "cta": {
+      "path": "sections/cta",
+      "component": "Cta",
+      "enabled": true,
+      "required": true,
+      "order": 7
+    }
+  },
+
+  "content": {
+    "basePath": "Content",
+    "format": "markdown",
+    "frontmatter": true
+  },
+
+  "build": {
+    "output": "apps/marketing/src/generated",
+    "types": true,
+    "validation": true
+  }
+}

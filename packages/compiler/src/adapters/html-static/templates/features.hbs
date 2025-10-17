@@ -1,0 +1,42 @@
+<div class="features-content">
+    <div class="container">
+        {{#if title}}
+        <div class="section-header">
+            <h2 class="section-title">{{title}}</h2>
+            {{#if subtitle}}
+            <p class="section-subtitle">{{subtitle}}</p>
+            {{/if}}
+        </div>
+        {{/if}}
+
+        {{#if features}}
+        <div class="features-grid">
+            {{#each features}}
+            <div class="feature-card">
+                {{#if icon}}
+                <div class="feature-icon">
+                    <img src="{{icon}}" alt="{{title}}" />
+                </div>
+                {{/if}}
+
+                {{#if title}}
+                <h3 class="feature-title">{{title}}</h3>
+                {{/if}}
+
+                {{#if description}}
+                <p class="feature-description">{{description}}</p>
+                {{/if}}
+
+                {{#if link}}
+                <a href="{{link.url}}" class="feature-link">{{link.text}}</a>
+                {{/if}}
+            </div>
+            {{/each}}
+        </div>
+        {{else}}
+        <div class="features-content">
+            {{{content}}}
+        </div>
+        {{/if}}
+    </div>
+</div>

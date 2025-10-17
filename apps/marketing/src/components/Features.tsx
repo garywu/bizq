@@ -18,35 +18,35 @@ interface FeatureProps {
 
 const features: FeatureProps[] = [
   {
-    title: "Responsive Design",
+    title: "Task Catalog Marketplace",
     description:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Nisi nesciunt est nostrum omnis ab sapiente.",
+      "Browse thousands of standardized business operations. Every task has defined inputs, outputs, and pricing - just like Amazon products.",
     image: image4,
   },
   {
-    title: "Intuitive user interface",
+    title: "Universal Delegation",
     description:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Nisi nesciunt est nostrum omnis ab sapiente.",
+      "Transform any business operation into a delegatable task. AI handles routine work, human experts manage complexity - all through familiar interfaces.",
     image: image3,
   },
   {
-    title: "AI-Powered insights",
+    title: "Creator Royalties Forever",
     description:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Nisi nesciunt est nostrum omnis ab sapiente.",
+      "Standardize a new business task and earn 5% royalties on every execution forever. Your innovation becomes passive income.",
     image: image,
   },
 ];
 
 const featureList: string[] = [
-  "Dark/Light theme",
-  "Reviews",
-  "Features",
-  "Pricing",
-  "Contact form",
-  "Our team",
-  "Responsive design",
-  "Newsletter",
-  "Minimalist",
+  "Task Catalog Marketplace",
+  "Universal Delegation",
+  "Creator Royalties",
+  "Portfolio Management",
+  "AI + Human Workers",
+  "Familiar Interfaces",
+  "Standardized Operations",
+  "Network Effects",
+  "Scale to 1000 Businesses",
 ];
 
 export const Features = () => {
@@ -56,10 +56,11 @@ export const Features = () => {
       className="container py-24 sm:py-32 space-y-8"
     >
       <h2 className="text-3xl lg:text-4xl font-bold md:text-center">
-        Many{" "}
+        The{" "}
         <span className="bg-gradient-to-b from-primary/60 to-primary text-transparent bg-clip-text">
-          Great Features
-        </span>
+          Universal Delegation
+        </span>{" "}
+        Platform
       </h2>
 
       <div className="flex flex-wrap md:justify-center gap-4">

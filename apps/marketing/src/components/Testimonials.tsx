@@ -17,45 +17,45 @@ interface TestimonialProps {
 const testimonials: TestimonialProps[] = [
   {
     image: "https://github.com/shadcn.png",
-    name: "John Doe React",
-    userName: "@john_Doe",
-    comment: "This landing page is awesome!",
+    name: "Sarah Chen",
+    userName: "@sarah_dropship",
+    comment: "I went from managing 1 store to 5 businesses in 3 months. BizQ handles all the operations I used to do manually.",
   },
   {
     image: "https://github.com/shadcn.png",
-    name: "John Doe React",
-    userName: "@john_Doe1",
+    name: "Marcus Rodriguez",
+    userName: "@marcus_consult",
     comment:
-      "Lorem ipsum dolor sit amet,empor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud.",
+      "The task catalog is incredible. I can delegate complex consulting deliverables that used to take me days. Now it's standardized and automated.",
   },
 
   {
     image: "https://github.com/shadcn.png",
-    name: "John Doe React",
-    userName: "@john_Doe2",
+    name: "Jennifer Walsh",
+    userName: "@jen_restaurant",
     comment:
-      "Lorem ipsum dolor sit amet,exercitation. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident.",
+      "Running 3 restaurants used to mean 80 hours/week. Now I spend 10 hours reviewing AI-completed tasks and approving high-value decisions.",
   },
   {
     image: "https://github.com/shadcn.png",
-    name: "John Doe React",
-    userName: "@john_Doe3",
+    name: "David Kim",
+    userName: "@david_portfolio",
     comment:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.",
+      "I created a custom task for 'viral TikTok analysis' and now earn $250/month in royalties. The platform turns expertise into passive income.",
   },
   {
     image: "https://github.com/shadcn.png",
-    name: "John Doe React",
-    userName: "@john_Doe4",
+    name: "Lisa Thompson",
+    userName: "@lisa_ecommerce",
     comment:
-      "Lorem ipsum dolor sit amet, tempor incididunt  aliqua. Ut enim ad minim veniam, quis nostrud.",
+      "Customer service used to be my bottleneck. Now AI handles 90% of inquiries and routes complex cases to human experts automatically.",
   },
   {
     image: "https://github.com/shadcn.png",
-    name: "John Doe React",
-    userName: "@john_Doe5",
+    name: "Alex Johnson",
+    userName: "@alex_agency",
     comment:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+      "We standardized our entire client onboarding process. New clients get the same high-quality experience without us doing repetitive work.",
   },
 ];
 
@@ -66,17 +66,15 @@ export const Testimonials = () => {
       className="container py-24 sm:py-32"
     >
       <h2 className="text-3xl md:text-4xl font-bold">
-        Discover Why
+        From Solo to
         <span className="bg-gradient-to-b from-primary/60 to-primary text-transparent bg-clip-text">
           {" "}
-          People Love{" "}
+          Portfolio Operator{" "}
         </span>
-        This Landing Page
       </h2>
 
       <p className="text-xl text-muted-foreground pt-4 pb-8">
-        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Non unde error
-        facere hic reiciendis illo
+        Real entrepreneurs using BizQ to scale from 1 to many businesses through universal delegation.
       </p>
 
       <div className="grid md:grid-cols-2 lg:grid-cols-4 sm:block columns-2  lg:columns-3 lg:gap-6 mx-auto space-y-4 lg:space-y-6">

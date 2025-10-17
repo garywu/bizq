@@ -1,0 +1,108 @@
+version: '3.8'
+
+services:
+  # API Gateway
+  api-gateway:
+    build: ./bizq-api-gateway
+    ports:
+      - "3000:3000"
+    environment:
+      - PORT=3000
+      - SEARCH_SUGGESTIONS_URL=http://search-suggestions:3001
+      - DOMAIN_SUGGESTIONS_URL=http://domain-suggestions:3002
+    depends_on:
+      - search-suggestions
+      - domain-suggestions
+    networks:
+      - bizq-network
+
+  # Search Suggestions Microservice
+  search-suggestions:
+    build: ./bizq-search-suggestions
+    ports:
+      - "3001:3001"
+    environment:
+      - PORT=3001
+      - ELASTICSEARCH_NODE=http://elasticsearch:9200
+      - REDIS_URL=redis://redis:6379
+      - OPENAI_API_KEY=${OPENAI_API_KEY}
+    depends_on:
+      - elasticsearch
+      - redis
+    networks:
+      - bizq-network
+
+  # Domain Suggestions Microservice
+  domain-suggestions:
+    build: ./bizq-domain-suggestions
+    ports:
+      - "3002:3002"
+    environment:
+      - PORT=3002
+      - OPENAI_API_KEY=${OPENAI_API_KEY}
+      - REDIS_URL=redis://redis:6379
+    depends_on:
+      - redis
+    networks:
+      - bizq-network
+
+  # Elasticsearch for search suggestions
+  elasticsearch:
+    image: docker.elastic.co/elasticsearch/elasticsearch:8.11.0
+    environment:
+      - discovery.type=single-node
+      - xpack.security.enabled=false
+      - "ES_JAVA_OPTS=-Xms512m -Xmx512m"
+    ports:
+      - "9200:9200"
+      - "9300:9300"
+    volumes:
+      - elasticsearch-data:/usr/share/elasticsearch/data
+    networks:
+      - bizq-network
+
+  # Redis for caching
+  redis:
+    image: redis:7-alpine
+    ports:
+      - "6379:6379"
+    volumes:
+      - redis-data:/data
+    networks:
+      - bizq-network
+
+  # Optional: Kibana for Elasticsearch monitoring
+  kibana:
+    image: docker.elastic.co/kibana/kibana:8.11.0
+    ports:
+      - "5601:5601"
+    environment:
+      - ELASTICSEARCH_HOSTS=http://elasticsearch:9200
+    depends_on:
+      - elasticsearch
+    networks:
+      - bizq-network
+    profiles:
+      - monitoring
+
+  # Optional: Redis Commander for Redis monitoring
+  redis-commander:
+    image: rediscommander/redis-commander:latest
+    environment:
+      - REDIS_HOSTS=local:redis:6379
+    ports:
+      - "8081:8081"
+    depends_on:
+      - redis
+    networks:
+      - bizq-network
+    profiles:
+      - monitoring
+
+networks:
+  bizq-network:
+    driver: bridge
+
+volumes:
+  elasticsearch-data:
+  redis-data:

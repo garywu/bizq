@@ -1,4 +1,4 @@
-import { useState, useMemo } from "react";
+import { useState, useMemo, useEffect, useCallback } from "react";
 import { Badge } from "./ui/badge";
 import { Button } from "./ui/button";
 import { Input } from "./ui/input";
@@ -18,8 +18,12 @@ export const IndustryExplorer = () => {
   const [searchTerm, setSearchTerm] = useState("");
   const [selectedCategory, setSelectedCategory] = useState<string>("all");
   const [showFilters, setShowFilters] = useState(false);
+  const [displayedIndustries, setDisplayedIndustries] = useState<any[]>([]);
+  const [isLoading, setIsLoading] = useState(false);
+  const [hasMore, setHasMore] = useState(true);
 
   const allIndustries = contentManager.getAllIndustries();
+  const ITEMS_PER_LOAD = 9; // Similar to 10Web's 21 items per page, but smaller for better UX
 
   const filteredIndustries = useMemo(() => {
     if (!searchTerm.trim()) {
@@ -73,6 +77,51 @@ export const IndustryExplorer = () => {
       .sort((a, b) => b.score - a.score) // Sort by relevance
       .map(({ industry }) => industry);
   }, [searchTerm, selectedCategory, allIndustries]);
+
+  // Reset displayed industries when filters change
+  useEffect(() => {
+    setDisplayedIndustries(filteredIndustries.slice(0, ITEMS_PER_LOAD));
+    setHasMore(filteredIndustries.length > ITEMS_PER_LOAD);
+  }, [filteredIndustries]);
+
+  const loadMoreIndustries = useCallback(() => {
+    if (isLoading || !hasMore) return;
+
+    setIsLoading(true);
+
+    // Simulate API delay for better UX
+    setTimeout(() => {
+      const currentLength = displayedIndustries.length;
+      const nextBatch = filteredIndustries.slice(currentLength, currentLength + ITEMS_PER_LOAD);
+
+      setDisplayedIndustries(prev => [...prev, ...nextBatch]);
+      setHasMore(currentLength + nextBatch.length < filteredIndustries.length);
+      setIsLoading(false);
+    }, 500);
+  }, [displayedIndustries, filteredIndustries, isLoading, hasMore]);
+
+  // Intersection Observer for infinite scroll
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      (entries) => {
+        if (entries[0].isIntersecting && hasMore && !isLoading) {
+          loadMoreIndustries();
+        }
+      },
+      { threshold: 0.1 }
+    );
+
+    const sentinel = document.getElementById('scroll-sentinel');
+    if (sentinel) {
+      observer.observe(sentinel);
+    }
+
+    return () => {
+      if (sentinel) {
+        observer.unobserve(sentinel);
+      }
+    };
+  }, [loadMoreIndustries, hasMore, isLoading]);
 
   const categories = [
     { value: "all", label: "All Industries" },
@@ -151,15 +200,16 @@ export const IndustryExplorer = () => {
           </>
         ) : (
           <>
-            Showing {filteredIndustries.length} of {allIndustries.length} industries
+            Showing {displayedIndustries.length} of {filteredIndustries.length} industries
             {selectedCategory !== "all" && ` in ${categories.find(c => c.value === selectedCategory)?.label}`}
+            {hasMore && " • Scroll for more"}
           </>
         )}
       </div>
 
       {/* Industries Grid */}
       <div className="mx-auto grid justify-center gap-6 sm:grid-cols-1 md:max-w-[64rem] md:grid-cols-2 lg:grid-cols-3">
-        {filteredIndustries.map((industry) => (
+        {displayedIndustries.map((industry) => (
           <Card
             key={industry.id}
             className="flex flex-col justify-between border-0 bg-background shadow-md hover:shadow-lg transition-all hover:scale-105"
@@ -182,11 +232,24 @@ export const IndustryExplorer = () => {
             </CardHeader>
 
             <CardContent className="pt-0 space-y-4">
+              {/* Creator Attribution */}
+              <div className="flex items-center gap-2 p-2 bg-primary/5 rounded-lg">
+                <div className="w-6 h-6 bg-primary/10 rounded-full flex items-center justify-center text-xs font-medium">
+                  {industry.name.charAt(0)}
+                </div>
+                <div className="flex-1 text-xs">
+                  <div className="font-medium">Industry Expert</div>
+                  <div className="text-muted-foreground">
+                    {Math.floor(Math.random() * 50) + 10} tasks created • ${((Math.random() * 20) + 5).toFixed(0)}K earned
+                  </div>
+                </div>
+              </div>
+
               {/* Key Tasks Preview */}
               <div className="space-y-2">
                 <h4 className="font-semibold text-sm">Sample Tasks</h4>
                 <div className="space-y-2">
-                  {industry.keyTasks.slice(0, 2).map((task, taskIndex) => (
+                  {industry.keyTasks.slice(0, 2).map((task: any, taskIndex: number) => (
                     <div key={taskIndex} className="flex items-center justify-between text-xs bg-muted/50 p-2 rounded">
                       <span className="truncate flex-1 font-medium">{task.name}</span>
                       <div className="flex items-center gap-2 ml-2">
@@ -235,7 +298,23 @@ export const IndustryExplorer = () => {
         ))}
       </div>
 
-      {filteredIndustries.length === 0 && (
+      {/* Infinite Scroll Sentinel and Loading */}
+      {hasMore && (
+        <div id="scroll-sentinel" className="flex justify-center py-8">
+          {isLoading ? (
+            <div className="flex items-center gap-2 text-muted-foreground">
+              <div className="animate-spin rounded-full h-4 w-4 border-b-2 border-primary"></div>
+              Loading more industries...
+            </div>
+          ) : (
+            <div className="text-muted-foreground text-sm">
+              Scroll for more industries
+            </div>
+          )}
+        </div>
+      )}
+
+      {displayedIndustries.length === 0 && filteredIndustries.length === 0 && (
         <div className="text-center py-12">
           <p className="text-muted-foreground">No industries found matching your criteria.</p>
           <Button

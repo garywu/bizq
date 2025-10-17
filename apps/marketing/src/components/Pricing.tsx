@@ -26,48 +26,48 @@ interface PricingProps {
 
 const pricingList: PricingProps[] = [
   {
-    title: "Free",
+    title: "Solo Entrepreneur",
     popular: 0,
-    price: 0,
+    price: 29,
     description:
-      "Lorem ipsum dolor sit, amet ipsum consectetur adipisicing elit.",
-    buttonText: "Get Started",
+      "Perfect for dropshippers, consultants, and service providers managing 1-3 businesses.",
+    buttonText: "Start Delegating",
     benefitList: [
-      "1 Team member",
-      "2 GB Storage",
-      "Upto 4 pages",
-      "Community support",
-      "lorem ipsum dolor",
+      "100 task executions/month",
+      "Access to task catalog",
+      "AI + human workers",
+      "Basic portfolio dashboard",
+      "Email support",
     ],
   },
   {
-    title: "Premium",
+    title: "Portfolio Operator",
     popular: 1,
-    price: 5,
+    price: 99,
     description:
-      "Lorem ipsum dolor sit, amet ipsum consectetur adipisicing elit.",
-    buttonText: "Start Free Trial",
+      "For entrepreneurs managing multiple businesses through standardized operations.",
+    buttonText: "Scale Your Portfolio",
     benefitList: [
-      "4 Team member",
-      "4 GB Storage",
-      "Upto 6 pages",
-      "Priority support",
-      "lorem ipsum dolor",
+      "1000 task executions/month",
+      "Priority task execution",
+      "Custom task creation",
+      "Advanced analytics",
+      "Phone + email support",
     ],
   },
   {
     title: "Enterprise",
     popular: 0,
-    price: 40,
+    price: 299,
     description:
-      "Lorem ipsum dolor sit, amet ipsum consectetur adipisicing elit.",
-    buttonText: "Contact US",
+      "For teams and organizations needing unlimited delegation across departments.",
+    buttonText: "Contact Sales",
     benefitList: [
-      "10 Team member",
-      "8 GB Storage",
-      "Upto 10 pages",
-      "Priority support",
-      "lorem ipsum dolor",
+      "Unlimited task executions",
+      "Private task catalogs",
+      "API access",
+      "Dedicated account manager",
+      "Custom integrations",
     ],
   },
 ];
@@ -79,16 +79,15 @@ export const Pricing = () => {
       className="container py-24 sm:py-32"
     >
       <h2 className="text-3xl md:text-4xl font-bold text-center">
-        Get
+        Scale from
         <span className="bg-gradient-to-b from-primary/60 to-primary text-transparent bg-clip-text">
           {" "}
-          Unlimited{" "}
+          1 to 1000{" "}
         </span>
-        Access
+        Businesses
       </h2>
       <h3 className="text-xl text-center text-muted-foreground pt-4 pb-8">
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Alias
-        reiciendis.
+        Start delegating today. Pay only for task executions - no setup fees, no minimums.
       </h3>
       <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
         {pricingList.map((pricing: PricingProps) => (

@@ -1,0 +1,15 @@
+{
+  "key": "compile-html-static-193ac61c",
+  "data": {
+    "success": true,
+    "outputPath": "./dist",
+    "files": [
+      "index.html"
+    ],
+    "errors": [],
+    "warnings": [],
+    "duration": 26
+  },
+  "timestamp": "2025-10-17T04:57:27.702Z",
+  "ttl": 3600
+}

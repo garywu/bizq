@@ -13,33 +13,31 @@ interface FAQProps {
 
 const FAQList: FAQProps[] = [
   {
-    question: "Is this template free?",
-    answer: "Yes. It is a free ChadcnUI template.",
+    question: "How does BizQ differ from automation tools like Zapier?",
+    answer: "BizQ is not just automation - it's universal delegation. We standardize entire business operations into delegatable tasks, not just API connections. AI handles routine work, human experts manage complexity, all through familiar interfaces.",
     value: "item-1",
   },
   {
-    question: "Lorem ipsum dolor sit amet consectetur adipisicing elit?",
+    question: "Can I create my own tasks for the catalog?",
     answer:
-      "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sint labore quidem quam? Consectetur sapiente iste rerum reiciendis animi nihil nostrum sit quo, modi quod.",
+      "Absolutely! When you standardize a new business operation, you earn 5% royalties on every execution forever. Your innovation becomes passive income while helping other businesses.",
     value: "item-2",
   },
   {
-    question:
-      "Lorem ipsum dolor sit amet  Consectetur natus dolores minus quibusdam?",
+    question: "What happens when AI can't complete a task?",
     answer:
-      "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Labore qui nostrum reiciendis veritatis necessitatibus maxime quis ipsa vitae cumque quo?",
+      "Tasks automatically route to qualified human specialists. You set confidence thresholds, and our system ensures the right worker (AI or human) handles each task based on complexity and your preferences.",
     value: "item-3",
   },
   {
-    question: "Lorem ipsum dolor sit amet, consectetur adipisicing elit?",
-    answer: "Lorem ipsum dolor sit amet consectetur, adipisicing elit.",
+    question: "How do royalties work for task creators?",
+    answer: "Standardize a task definition and earn 5% on every execution. Unlike traditional marketplaces, royalties continue forever even when AI takes over. One good task can generate thousands in passive income.",
     value: "item-4",
   },
   {
-    question:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur natus?",
+    question: "Can I manage multiple businesses with BizQ?",
     answer:
-      "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sint labore quidem quam? Consectetur sapiente iste rerum reiciendis animi nihil nostrum sit quo, modi quod.",
+      "Yes! BizQ transforms solo entrepreneurs into portfolio operators. Manage 1-1000 businesses through standardized operations. Our portfolio dashboard shows all businesses at once with pattern recognition across your entire operation.",
     value: "item-5",
   },
 ];

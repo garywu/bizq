@@ -1,0 +1,36 @@
+<div class="hero-content">
+    <div class="container">
+        <div class="hero-grid">
+            <div class="hero-text">
+                {{#if title}}
+                <h1 class="hero-title">{{title}}</h1>
+                {{/if}}
+
+                {{#if subtitle}}
+                <p class="hero-subtitle">{{subtitle}}</p>
+                {{/if}}
+
+                {{#if description}}
+                <div class="hero-description">
+                    {{{content}}}
+                </div>
+                {{/if}}
+
+                {{#if cta}}
+                <div class="hero-actions">
+                    <a href="{{cta.url}}" class="btn btn-primary btn-lg">{{cta.text}}</a>
+                    {{#if cta.secondary}}
+                    <a href="{{cta.secondary.url}}" class="btn btn-secondary btn-lg">{{cta.secondary.text}}</a>
+                    {{/if}}
+                </div>
+                {{/if}}
+            </div>
+
+            {{#if image}}
+            <div class="hero-image">
+                <img src="{{image}}" alt="{{title}}" />
+            </div>
+            {{/if}}
+        </div>
+    </div>
+</div>

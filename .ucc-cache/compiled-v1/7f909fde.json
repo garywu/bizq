@@ -1,0 +1,15 @@
+{
+  "key": "compile-cloudflare-pages-193ac61c",
+  "data": {
+    "success": true,
+    "outputPath": "./dist",
+    "files": [
+      "index.html"
+    ],
+    "errors": [],
+    "warnings": [],
+    "duration": 69
+  },
+  "timestamp": "2025-10-17T05:02:55.607Z",
+  "ttl": 3600
+}

@@ -16,8 +16,13 @@ import {
   Shield,
   Users,
   Clock,
-  Target
+  Target,
+  MessageCircle,
+  Send,
+  Sparkles,
+  Globe
 } from "lucide-react";
+import { useState } from "react";
 
 interface ToolProps {
   title: string;
@@ -29,6 +34,17 @@ interface ToolProps {
     users: string;
     efficiency: string;
     satisfaction: string;
+  };
+  creator?: {
+    name: string;
+    avatar: string;
+    earnings: string;
+    tasksCreated: number;
+  };
+  integrations?: string[];
+  pricing?: {
+    free: boolean;
+    startingPrice: string;
   };
 }
 
@@ -43,6 +59,17 @@ const tools: ToolProps[] = [
       users: "10,000+",
       efficiency: "85%",
       satisfaction: "4.9/5"
+    },
+    creator: {
+      name: "Sarah Chen",
+      avatar: "SC",
+      earnings: "$12,450",
+      tasksCreated: 47
+    },
+    integrations: ["Slack", "Microsoft Teams", "Zapier", "API"],
+    pricing: {
+      free: true,
+      startingPrice: "$0"
     }
   },
   {
@@ -55,6 +82,17 @@ const tools: ToolProps[] = [
       users: "5,000+",
       efficiency: "70%",
       satisfaction: "4.8/5"
+    },
+    creator: {
+      name: "Marcus Rodriguez",
+      avatar: "MR",
+      earnings: "$8,920",
+      tasksCreated: 23
+    },
+    integrations: ["Figma", "Miro", "Notion", "API"],
+    pricing: {
+      free: true,
+      startingPrice: "$0"
     }
   },
   {
@@ -91,6 +129,17 @@ const tools: ToolProps[] = [
       users: "12,000+",
       efficiency: "75%",
       satisfaction: "4.8/5"
+    },
+    creator: {
+      name: "Dr. Elena Vasquez",
+      avatar: "EV",
+      earnings: "$15,670",
+      tasksCreated: 89
+    },
+    integrations: ["OpenAI", "Claude", "Google AI", "Azure OpenAI"],
+    pricing: {
+      free: true,
+      startingPrice: "$0"
     }
   },
   {
@@ -152,10 +201,35 @@ const tools: ToolProps[] = [
       efficiency: "55%",
       satisfaction: "4.6/5"
     }
+  },
+  {
+    title: "Domain Suggestions",
+    description: "AI-powered domain name generator that creates creative, brandable domain suggestions for your business with real-time availability checking.",
+    category: "AI & Automation",
+    icon: Globe,
+    features: ["AI-generated suggestions", "Real-time availability", "Industry-specific patterns", "Bulk generation", "WHOIS integration"],
+    metrics: {
+      users: "2,500+",
+      efficiency: "95%",
+      satisfaction: "4.9/5"
+    },
+    creator: {
+      name: "BizQ AI Team",
+      avatar: "BA",
+      earnings: "$5,230",
+      tasksCreated: 156
+    },
+    integrations: ["OpenAI", "WHOIS API", "Cloudflare"],
+    pricing: {
+      free: true,
+      startingPrice: "$0"
+    }
   }
 ];
 
 export const Tools = () => {
+  const [chatMessage, setChatMessage] = useState("");
+
   return (
     <section
       id="tools"
@@ -168,6 +242,57 @@ export const Tools = () => {
         <p className="max-w-[85%] leading-normal text-muted-foreground sm:text-lg sm:leading-7">
           Our comprehensive suite of 25+ tools empowers businesses to delegate, automate, and optimize every aspect of their operations with enterprise-grade reliability.
         </p>
+      </div>
+
+      {/* Conversational Demo */}
+      <div className="mx-auto max-w-4xl">
+        <Card className="border-2 border-primary/20 bg-gradient-to-br from-primary/5 to-primary/10">
+          <CardHeader className="text-center">
+            <div className="flex items-center justify-center gap-2 mb-2">
+              <Sparkles className="h-5 w-5 text-primary" />
+              <span className="text-sm font-medium text-primary">Try it now</span>
+            </div>
+            <CardTitle className="text-xl">Create a task by chatting with AI</CardTitle>
+            <p className="text-muted-foreground text-sm">
+              Describe your business task in natural language and watch it come to life instantly
+            </p>
+          </CardHeader>
+          <CardContent className="space-y-4">
+            <div className="bg-background/50 rounded-lg p-4 border">
+              <div className="flex items-start gap-3 mb-3">
+                <div className="w-8 h-8 bg-primary/10 rounded-full flex items-center justify-center">
+                  <Bot className="h-4 w-4 text-primary" />
+                </div>
+                <div className="flex-1">
+                  <p className="text-sm text-muted-foreground mb-2">AI Assistant</p>
+                  <p className="text-sm">Hi! I'm here to help you create business tasks. What would you like to automate today?</p>
+                </div>
+              </div>
+              <div className="flex items-start gap-3">
+                <div className="w-8 h-8 bg-muted rounded-full flex items-center justify-center">
+                  <MessageCircle className="h-4 w-4" />
+                </div>
+                <div className="flex-1">
+                  <p className="text-sm text-muted-foreground mb-2">You</p>
+                  <p className="text-sm italic text-muted-foreground">Type a message like "Create a task to handle customer support tickets"...</p>
+                </div>
+              </div>
+            </div>
+            <div className="flex gap-2">
+              <input
+                type="text"
+                placeholder="Describe your business task..."
+                className="flex-1 px-3 py-2 text-sm border rounded-md bg-background"
+                value={chatMessage}
+                onChange={(e) => setChatMessage(e.target.value)}
+              />
+              <button className="px-4 py-2 bg-primary text-primary-foreground rounded-md hover:bg-primary/90 transition-colors flex items-center gap-2">
+                <Send className="h-4 w-4" />
+                Create Task
+              </button>
+            </div>
+          </CardContent>
+        </Card>
       </div>
 
       {/* Tool Categories Overview */}
@@ -209,23 +334,60 @@ export const Tools = () => {
                 </CardContent>
               </CardHeader>
 
-              <CardContent className="pt-0 space-y-4">
-                {/* Key Features */}
-                <div className="space-y-2">
-                  <h4 className="font-semibold text-sm">Key Features</h4>
-                  <div className="flex flex-wrap gap-1">
-                    {tool.features.slice(0, 3).map((feature, featureIndex) => (
-                      <Badge key={featureIndex} variant="secondary" className="text-xs">
-                        {feature}
-                      </Badge>
-                    ))}
-                    {tool.features.length > 3 && (
-                      <Badge variant="outline" className="text-xs">
-                        +{tool.features.length - 3} more
-                      </Badge>
-                    )}
-                  </div>
-                </div>
+               <CardContent className="pt-0 space-y-4">
+                 {/* Creator Attribution */}
+                 {tool.creator && (
+                   <div className="space-y-2">
+                     <h4 className="font-semibold text-sm">Created by</h4>
+                     <div className="flex items-center gap-2">
+                       <div className="w-6 h-6 bg-primary/10 rounded-full flex items-center justify-center text-xs font-medium">
+                         {tool.creator.avatar}
+                       </div>
+                       <div className="flex-1">
+                         <div className="text-sm font-medium">{tool.creator.name}</div>
+                         <div className="text-xs text-muted-foreground">
+                           {tool.creator.tasksCreated} tasks • Earned {tool.creator.earnings}
+                         </div>
+                       </div>
+                     </div>
+                   </div>
+                 )}
+
+                 {/* Key Features */}
+                 <div className="space-y-2">
+                   <h4 className="font-semibold text-sm">Key Features</h4>
+                   <div className="flex flex-wrap gap-1">
+                     {tool.features.slice(0, 3).map((feature, featureIndex) => (
+                       <Badge key={featureIndex} variant="secondary" className="text-xs">
+                         {feature}
+                       </Badge>
+                     ))}
+                     {tool.features.length > 3 && (
+                       <Badge variant="outline" className="text-xs">
+                         +{tool.features.length - 3} more
+                       </Badge>
+                     )}
+                   </div>
+                 </div>
+
+                 {/* Integrations */}
+                 {tool.integrations && tool.integrations.length > 0 && (
+                   <div className="space-y-2">
+                     <h4 className="font-semibold text-sm">Integrations</h4>
+                     <div className="flex flex-wrap gap-1">
+                       {tool.integrations.slice(0, 4).map((integration, integrationIndex) => (
+                         <Badge key={integrationIndex} variant="outline" className="text-xs">
+                           {integration}
+                         </Badge>
+                       ))}
+                       {tool.integrations.length > 4 && (
+                         <Badge variant="outline" className="text-xs">
+                           +{tool.integrations.length - 4} more
+                         </Badge>
+                       )}
+                     </div>
+                   </div>
+                 )}
 
                 {/* Usage Metrics */}
                 {tool.metrics && (
@@ -249,11 +411,16 @@ export const Tools = () => {
                 )}
               </CardContent>
 
-              <CardFooter className="pt-0">
-                <div className="w-full text-center">
-                  <span className="text-xs text-muted-foreground">Ready to deploy</span>
-                </div>
-              </CardFooter>
+               <CardFooter className="pt-0">
+                 <div className="w-full flex items-center justify-between">
+                   <div className="text-xs text-muted-foreground">
+                     {tool.pricing?.free ? "Free tier available" : "Premium tool"}
+                   </div>
+                   <div className="text-xs font-medium">
+                     From {tool.pricing?.startingPrice || "$9.99"}
+                   </div>
+                 </div>
+               </CardFooter>
             </Card>
           );
         })}
